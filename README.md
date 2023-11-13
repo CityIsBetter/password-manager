@@ -1,10 +1,10 @@
-## password-manager
+## Password-manager
 Password manager made using Python and Mysql database for the storage of the passwords
 
 ## Screenshots
-![password-manager](ss1.png)
 ![password-manager](ss2.png)
 ![password-manager](ss3.png)
+![password-manager](ss1.png)
 
 ## Installation:
 
