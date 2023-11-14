@@ -12,7 +12,7 @@ frame = Frame(root, bg="#80c1ff", bd=5)
 frame.place(relx=0.50, rely=0.50, relwidth=0.98, relheight=0.45, anchor = "n")
 
 
-conn = mysql.connector.connect(host="localhost",password="M&Papw4in", user="root", database="passwordmanager")
+conn = mysql.connector.connect(host="localhost",password="password", user="root", database="passwordmanager")
 cursor = conn.cursor()
 
 
@@ -30,7 +30,7 @@ conn.commit()
 conn.close()
 
 def submit():
-    conn = mysql.connector.connect(host="localhost",password="M&Papw4in", user="root", database="passwordmanager")
+    conn = mysql.connector.connect(host="localhost",password="password", user="root", database="passwordmanager")
     cursor = conn.cursor()
 
     if app_name.get()!="" and url.get()!="" and email_id.get()!="" and password.get()!="":
@@ -60,7 +60,7 @@ def submit():
 
 def query():
 
-    conn = mysql.connector.connect(host="localhost",password="M&Papw4in", user="root", database="passwordmanager")
+    conn = mysql.connector.connect(host="localhost",password="password", user="root", database="passwordmanager")
     cursor = conn.cursor()
 
     cursor.execute("SELECT * FROM manager")
@@ -77,7 +77,7 @@ def query():
 
 def delete():
 
-    conn = mysql.connector.connect(host="localhost",password="M&Papw4in", user="root", database="passwordmanager")
+    conn = mysql.connector.connect(host="localhost",password="password", user="root", database="passwordmanager")
     cursor = conn.cursor()
 
     t = delete_id.get()
@@ -126,7 +126,7 @@ def update():
         submit_btn_edit = Button(edit, text="Save Record", command=change)
         submit_btn_edit.grid(row=4, column=0, columnspan=2, pady=5, padx=15, ipadx=135)
 
-        conn = mysql.connector.connect(host="localhost",password="M&Papw4in", user="root", database="passwordmanager")
+        conn = mysql.connector.connect(host="localhost",password="password", user="root", database="passwordmanager")
         cursor = conn.cursor()
 
         cursor.execute("SELECT * FROM manager where id = " + update_id.get())
@@ -147,7 +147,7 @@ def update():
 
 def change():
 
-    conn = mysql.connector.connect(host="localhost",password="M&Papw4in", user="root", database="passwordmanager")
+    conn = mysql.connector.connect(host="localhost",password="password", user="root", database="passwordmanager")
     cursor = conn.cursor()
 
     if app_name_edit.get()!="" and url_edit.get()!="" and email_id_edit.get()!="" and password_edit.get()!="":
